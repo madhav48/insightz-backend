@@ -6,9 +6,11 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.tools.tavily_search import TavilySearchResults
 from services.contextualize_user_query import format_history
+from utils.load_google_credentials import setup_google_credentials
 from dotenv import load_dotenv
 
 load_dotenv()
+setup_google_credentials()
 
 
 class NewsSummary:

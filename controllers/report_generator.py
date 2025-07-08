@@ -7,10 +7,12 @@ from services.contextualize_user_query import format_history
 from services.data_parser import parse_json, parse_list
 from controllers.clarification import ClarificationHandler
 from langchain_community.tools.tavily_search import TavilySearchResults
+from utils.load_google_credentials import setup_google_credentials
 from services.download_content import load_documents
 
 
 load_dotenv()
+setup_google_credentials()
 
 class ReportGenerator:
     def __init__(self, verbose=False):

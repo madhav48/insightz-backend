@@ -8,9 +8,11 @@ from langchain_community.tools import DuckDuckGoSearchResults
 from langchain.agents import Tool, initialize_agent, AgentType
 from dotenv import load_dotenv
 from services.contextualize_user_query import contextualize_user_query
+from utils.load_google_credentials import setup_google_credentials
 from services.agents import build_search_agent
 
 load_dotenv()
+setup_google_credentials()
 
 
 # Load glossary vector DB with Google embeddings
